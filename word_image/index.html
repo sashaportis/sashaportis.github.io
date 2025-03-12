@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Picker</title>
+	  <link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    
+<script>
+    var event1 = ["Murder","Meme","Infantilization","Courtship","Silence","Cinematic<br>Effect","Porridge","Sticking<br>Together","Handshake","Promises","Eager","Therapy","Sunday<br>Morning","Rainy<br>Day","Three<br>Blondes","Fire","Connectivity","Deal","Plumbing","Family","Artifice","Audience"];
+
+    function getItem(){
+        document.getElementById("event_text").innerHTML = event1[Math.floor(Math.random() * event1.length)];
+    }
+</script>
+    
+<script>
+    function random_image() {
+        var imageA = "image/1.jpg";
+        var imageB = "image/2.jpg";
+        var imageC = "image/3.jpg";
+        var imageC = "image/4.jpg";
+        var imageD = "image/5.jpg";
+        var imageE = "image/6.jpg";
+        var imageF = "image/7.jpg";
+        var imageG = "image/8.jpg";
+        var imageH = "image/9.jpg";
+        var imageI = "image/10.jpg";
+        var imageJ = "image/11.jpg";
+        var imageK = "image/12.jpg";
+        var imageL = "image/13.jpg";
+        var imageM = "image/14.jpg";
+
+
+        var array_of_images = new Array ();
+        console.log(array_of_images);
+        array_of_images.push(imageA);
+        array_of_images.push(imageB);
+        array_of_images.push(imageC);
+        array_of_images.push(imageD);
+        array_of_images.push(imageE);
+        array_of_images.push(imageF);
+        array_of_images.push(imageG);
+        array_of_images.push(imageH);
+        array_of_images.push(imageI);
+        array_of_images.push(imageJ);
+        array_of_images.push(imageK);
+        array_of_images.push(imageL);
+        array_of_images.push(imageM);
+
+      var choice = Math.floor(Math.random() * array_of_images.length);
+      document.getElementById("container").innerHTML = "<img src='" 
+          + array_of_images[choice] + "'></img>";
+}
+</script>
+</head>
+<body>
+
+    <div id="left">
+       <input id="event" type="button" onclick="getItem()" value="Word"/>
+	   <p id="event_text"></p>
+    </div>
+    <div id="right">
+        <input id="place" type="button" onclick="random_image()" value="Image"/>
+        <div id="container"></div>
+    </div>
+    
+    
+
+
+
+
+</body>
+</html>

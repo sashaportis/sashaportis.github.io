@@ -1,0 +1,108 @@
+body, html {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-size: 70px;
+    font-family: arial;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    
+}
+
+
+img {
+    position: relative;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 100px;
+/*    border: 1px solid black;*/
+  /*  -webkit-box-shadow: -1px 3px 25px -2px rgba(0,0,0,0.14);
+    -moz-box-shadow: -1px 3px 25px -2px rgba(0,0,0,0.14);
+    box-shadow: -1px 3px 25px -2px rgba(0,0,0,0.14);*/
+}
+input {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    width: auto;
+    padding: 0 20px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px black solid;
+    color:black;
+    background:white;
+    border-radius: 10px;
+   /* 
+      -webkit-box-shadow: -1px 3px 25px -2px rgba(0,0,0,0.14);
+    -moz-box-shadow: -1px 3px 25px -2px rgba(0,0,0,0.14);
+    box-shadow: -1px 3px 25px -2px rgba(0,0,0,0.14);*/
+	}
+    
+input:hover  {
+    background: #eaeaea;
+}
+
+
+
+#left {
+    width: 50%;
+    height: 100%;
+    float: left;
+   /* background-color: coral;*/
+}
+
+#right{
+    width: 50%;
+    height: 100%;
+    float: left;
+    /*background-color: gold;*/
+}
+
+#event {
+    position: relative;
+    margin-top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+#place {
+  position: relative;
+  left: 50%;
+    margin-top: 50px;
+  transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    
+}
+
+
+#event_text {
+  
+    position: relative;
+}
+
+#place_text {
+    top: 100px;
+    position: relative;
+}
+
+
+
+#center {
+    position: fixed;
+      left: 50%;
+  transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+/*    color: red;*/
+}
