@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blur Sides of Image</title>
+<style>
+    .container {
+        position: relative;
+        width: 300px; /* Adjust as needed */
+        height: 200px; /* Adjust as needed */
+        overflow: hidden;
+    }
+
+    .image {
+        width: 400px;
+        object-fit: cover;
+        filter: blur(20px);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .mask {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(to right, transparent, white 30%, white 70%, transparent);
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img class="image" src="landscapes/21.jpg">
+
+    <div class="mask"></div>
+</div>
+
+</body>
+</html>

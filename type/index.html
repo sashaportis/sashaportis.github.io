@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p {
+            font-size: 20px;
+            line-height: 40px;
+            position: relative;
+            font-family: "Rubik", sans-serif;
+            font-optical-sizing: auto;
+            text-transform: uppercase;
+        }
+
+        span {
+            display: inline-block;
+           /* vertical-align: top;  Align to the top */
+            position: relative;
+           /* top: 0;*/
+            line-height: 1; /* Reset line height to avoid extra space */
+        }
+
+        .size-1 {
+            font-size: 40px;
+        }
+
+        .size-2 {
+            font-size: 35px;
+        }
+
+        .size-3 {
+            font-size: 30px;
+        }
+    </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<p id="text">I was traveling from on space into another by way of this tight inner rock like tunnel made out of parts of those plastic kids houses with hollow plastic. Rachel and Emily were ahead of me, moving slowly one little part at a time like little birth canals. At every pause waiting I was on the verge of panicking and feeling totally claustrophobic, but kept slowing my breathing to prevent falling apart. Couldn't go backwards had to go forwards. 
+After waking up this seems to be related to people having babies, first rachel, then Emily (who is trying) and also the panicky feeling might also be a sensory translation from my actual bodily experience while sleeping, I've had a cold this week and can't breathe well out of my nose, if I had been breathing with my nose I can't get enough air and it feels panicky so I have to slow down and even out my breath. </p>
+
+<script>
+    const textElement = document.getElementById('text');
+    const textContent = textElement.textContent.trim();
+    let wrappedText = '';
+
+    for (let i = 0; i < textContent.length; i++) {
+        const character = textContent[i];
+        
+        if (character === ' ') {
+            // Add a non-breaking space for spaces
+            wrappedText += '<span>&nbsp;&nbsp;</span>';
+        } else {
+            const sizeClass = `size-${(i % 3) + 1}`;
+            wrappedText += `<span class="${sizeClass}">${character}</span>`;
+        }
+    }
+
+    textElement.innerHTML = wrappedText;
+</script>
+
+</body>
+</html>
