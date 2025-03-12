@@ -1,0 +1,110 @@
+
+<html>
+<head>
+
+    <title>Interruption Alarm</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<style>
+body{
+    margin: 0;
+    padding: 0;
+    overflow:hidden; 
+    background: lightgray;
+    }
+    
+
+    #audio-controls {
+  display: none;
+}
+
+
+.box {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.box b {
+  display: block;
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  background-color: #3673cf;
+  box-shadow: inset -5px -5px 5px rgba(0,0,0,.6), 15px 15px 2px rgba(0,0,0,.04);
+  position: absolute;
+  -webkit-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  -moz-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  -o-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+}
+
+
+@-webkit-keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 225px); }
+}
+@-moz-keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 225px); }
+}
+@-o-keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 225px); }
+}
+@keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 225px); }
+}
+@-webkit-keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 225px); }
+}
+@-moz-keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 225px); }
+}
+@-o-keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 225px); }
+}
+@keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 225px); }
+}
+
+
+ 
+</style>
+
+
+    
+</head>
+
+<body>
+
+
+    <div class="box"><b></b></div>
+
+
+ <audio controls style="display:none" id="audio">
+  <source src="alarm.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<script>
+document.getElementById('audio').play();
+</script>
+
+<script>
+  function playAudio() {
+  var audio = document.getElementById("audio");
+  audio.play();
+}
+
+setInterval(playAudio, 1800000); // 30 minutes in milliseconds
+
+</script>
+
+
+    
+</body>
+</html>
+
+
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: skyblue;
+           display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        #audio-controls {
+            display: none;
+        }
+
+        button, select {
+            /*width: 200px;*/
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            outline: none;
+            font-family: sans-serif;
+            border: none;
+        }
+
+        button {
+            border-radius: 30px;
+           margin-top: 40px;
+        }
+        #audio {
+            display: none;
+        }
+
+
+        .box  {
+  display: block;
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  background-color: #3673cf;
+  box-shadow: inset -5px -5px 5px rgba(0,0,0,.6), 15px 15px 2px rgba(0,0,0,.04);
+  position: absolute;
+  -webkit-animation: moveX 3.05s linear 0s infinite alternate, moveY 8s linear 0s infinite alternate;
+  -moz-animation: moveX 3.05s linear 0s infinite alternate, moveY 8s linear 0s infinite alternate;
+  -o-animation: moveX 3.05s linear 0s infinite alternate, moveY 8s linear 0s infinite alternate;
+  animation: moveX 3.05s linear 0s infinite alternate, moveY 8s linear 0s infinite alternate;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+
+
+
+@-webkit-keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 225px); }
+}
+@-moz-keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 225px); }
+}
+@-o-keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 225px); }
+}
+@keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 225px); }
+}
+@-webkit-keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 225px); }
+}
+@-moz-keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 225px); }
+}
+@-o-keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 225px); }
+}
+@keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 225px); }
+}
+    </style>
+</head>
+<body>
+
+<!--     <label for="interval">Choose an interval:</label>
+ -->    <select id="interval" onchange="updateInterval()">
+        <option value="600">Step 1: Set Interval</option>
+        <option value="600">10 minutes</option>
+        <option value="1200">20 minutes</option>
+        <option value="1800">30 minutes</option>
+        <option value="3600">1 hour</option>
+    </select>
+
+    <button onclick="setIntervalAndPlay()">Step 2: Set Interruption Alarm</button>
+
+        <div class="box">stress ball</div>
+
+
+    <audio id="audio" controls>
+        <source src="alarm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+<script>
+    var selectedInterval;
+
+    // Check day/night and set background color
+    function setDayNightBackground() {
+        var body = document.body; // Correctly reference the body element
+        var currentHour = new Date().getHours(); // Use local time
+
+        // Check if it's between 6 AM and 6 PM (daytime)
+        var isDaytime = currentHour >= 6 && currentHour < 18;
+
+        // Set background color based on day/night
+        body.style.backgroundColor = isDaytime ? "skyblue" : "#050d2b";
+    }
+
+    // Call the function on page load
+    setDayNightBackground();
+
+    function playAudio() {
+        var audio = document.getElementById("audio");
+        audio.play();
+    }
+
+    function setIntervalAndPlay() {
+        playAudio(); // Play audio immediately
+
+        var intervalSelect = document.getElementById("interval");
+        selectedInterval = intervalSelect.value;
+
+        setInterval(playAudio, selectedInterval * 1000);
+
+        // Update background color based on selected interval
+        setDayNightBackground();
+    }
+
+    function updateInterval() {
+        var intervalSelect = document.getElementById("interval");
+        selectedInterval = intervalSelect.value;
+
+        // Update background color based on selected interval
+        setDayNightBackground();
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   user-select: none;
+}
+    
+body {
+    margin: 20px;
+    padding: 0;}
+    
+h1 {
+	font-family: arial;
+	font-size: 62px;
+  line-height: 1.25;
+	text-align: justify;
+	font-weight: lighter; 
+    margin: 0;
+}
+
+a{
+	text-decoration: none;
+	}
+
+	/* unvisited link */
+a:link {
+    color: lightcyan;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+
+body {
+	background-color: black;
+  color: #2655ff;
+}
+
+span {
+	background-color: #2655ff;
+	padding: 0;
+	margin: 0;
+}
+
+span:hover {
+	cursor: pointer;
+}
+.audio-trigger:hover + #audio {
+  display: block;
+}
+
+.audio {
+  display: none;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<!-- https://freesound.org/people/InspectorJ/sounds/417768/
+ -->
+<h1>The watch began to <span class="audio-trigger" onclick="toggleAudio(this)">tick</span>
+<audio src="mp3/tick.mp3"></audio>. The sounds he had become accustomed to, the <span class="audio-trigger" onclick="toggleAudio(this)">roaring</span>
+<audio src="mp3/roaring.mp3"></audio> and <span class="mp3/audio-trigger" onclick="toggleAudio(this)">gurgling</span>
+<audio src="mp3/gurgling.mp3"></audio> 
+
+of the river, the <span class="mp3/audio-trigger" onclick="toggleAudio(this)">wailing</span>
+<audio src="mp3/wind.mp3"></audio>
+
+
+
+and <span class="mp3/audio-trigger" onclick="toggleAudio(this)">whining</span>
+<audio src="mp3/whining.mp3"></audio> of the wind, the <span class="audio-trigger" onclick="toggleAudio(this)">pattering</span>
+<audio src="mp3/pattering.mp3"></audio>
+and <span class="audio-trigger" onclick="toggleAudio(this)">dripping</span>
+<audio src="mp3/dripping.mp3"></audio> of rain, the 
+<span class="audio-trigger" onclick="toggleAudio(this)">chirrupping</span>
+<audio src="mp3/birds.mp3"></audio>
+of birds and the 
+<span class="audio-trigger" onclick="toggleAudio(this)">chirring</span>
+<audio src="mp3/insects.mp3"></audio>
+
+of insects, had natural, irregular rhythms, which were very soothing, but the steady, mechanical <span class="audio-trigger" onclick="toggleAudio(this)">tempo</span>
+<audio src="mp3/tick.mp3"></audio> of the watch gave him something he had been wanting in this <span class="audio-trigger" onclick="toggleAudio(this)">wild</span>
+<audio src="mp3/coyotes.mp3"></audio> place. It and the <span class="audio-trigger" onclick="toggleAudio(this)">book</span>
+<audio src="mp3/book.mp3"></audio> helped him feel connected to the 
+
+<span class="audio-trigger" onclick="toggleAudio(this)">civilized</span>
+<audio src="mp3/civilized.mp3"></audio>
+
+world he’d come from. He had no use for the time the watch could tell, but he needed the <span class="audio-trigger" onclick="toggleAudio(this)">ticking</span>
+<audio src="mp3/tick.mp3"></audio>. <br><br>	&#8212; <i>Abel&#8217;s Island</i>, William Steig</h1>
+
+
+
+<script>
+function toggleAudio(span) {
+  var audio = span.nextElementSibling;
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+    audio.currentTime = 0; // Reset audio to start
+  }
+}
+</script>
+</body>
+</html>

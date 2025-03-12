@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #audio-controls {
+            display: none;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="playAudio()">Set Interruption Alarm</button>
+
+    <audio id="audio" controls>
+        <source src="alarm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>

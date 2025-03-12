@@ -1,0 +1,116 @@
+
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Negative Clock</title>
+<meta name="keywords" content="analog,clock, sasha portis">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+
+html, body {height:100vh;
+            background-color: black;
+    overflow: hidden;}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.demo_area {
+    
+    
+    margin: 30vh auto;
+    width:200px;
+    border-radius:50%;
+    
+    -webkit-animation:spin 60s linear infinite;
+    -moz-animation:spin 60s linear infinite;
+    animation:spin 60s linear infinite;
+
+    
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+#clock {
+    background-image: url("clockBg.png");
+    height: 200px;
+    position: relative;
+    width: 200px;
+}
+#clock div {
+    position: absolute;
+    left:50%
+}
+#clock img[src*="second"] {
+    transition: transform 600000s linear 0s;
+}
+#clock:target img[src*="second"] {
+    transform: rotate(3600000deg);
+}
+#clock img[src*="minute"] {
+    transition: transform 360000s linear 0s;
+}
+#clock:target img[src*="minute"] {
+    transform: rotate(36000deg);
+}
+#clock img[src*="hour"] {
+    transition: transform 216000s linear 0s;
+}
+#clock:target img[src*="hour"] {
+    transform: rotate(360deg);
+}
+</style>
+</head>
+
+<body>
+
+<div class="demo_area" id="spin">
+  <div id="clock">
+    <div id="hour" style="transform: rotate(334.5deg);"><img src="hourhand.png"></div>
+    <div id="minute" style="transform: rotate(54deg);"><img src="minhand.png"></div>
+    <div id="second" style="transform: rotate(108deg);"><img src="sechand.png"></div>
+  </div>
+</div>
+
+<script type="text/javascript">function Clock_dg(prop) {
+    var angle = 360/60,
+        date = new Date();
+        var h = date.getHours();
+        if(h > 12) {
+            h = h - 12;
+        }
+    
+        hour = h;
+        minute = date.getMinutes(),
+        second = date.getSeconds(),
+        hourAngle = (360/12) * hour + (360/(12*60)) * minute;
+    
+        $('#minute')[0].style[prop] = 'rotate('+angle * minute+'deg)';
+        $('#second')[0].style[prop] = 'rotate('+angle * second+'deg)';
+        $('#hour')[0].style[prop] = 'rotate('+hourAngle+'deg)';
+}
+$(function(){        
+    var props = 'transform WebkitTransform MozTransform OTransform msTransform'.split(' '),
+        prop,
+        el = document.createElement('div');
+    
+    for(var i = 0, l = props.length; i < l; i++) {
+        if(typeof el.style[props[i]] !== "undefined") {
+            prop = props[i];
+            break;
+        }
+    }
+    setInterval(function(){
+        Clock_dg(prop)
+    },100);
+});
+</script>
+</body>
+</html>

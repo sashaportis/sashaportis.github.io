@@ -1,0 +1,164 @@
+
+<html>
+<head>
+
+    <title>Interruption Alarm</title>
+<style>
+body{
+    margin: 0;
+    padding: 0;
+    overflow:hidden; 
+    }
+    
+.box {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.box b {
+  display: block;
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  background-color: #3673cf;
+  box-shadow: inset -5px -5px 5px rgba(0,0,0,.6), 15px 15px 2px rgba(0,0,0,.04);
+  position: absolute;
+  -webkit-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  -moz-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  -o-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+}
+
+
+@-webkit-keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 225px); }
+}
+@-moz-keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 225px); }
+}
+@-o-keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 225px); }
+}
+@keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 225px); }
+}
+@-webkit-keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 225px); }
+}
+@-moz-keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 225px); }
+}
+@-o-keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 225px); }
+}
+@keyframes moveY {
+  from { top: 0; } to { top: calc(100% - 225px); }
+}
+
+/* No transition But telepor*/
+/*@-webkit-keyframes moveX {
+  from { left: 0; } to { right: 0; }
+}
+@-moz-keyframes moveX {
+  from { left: 0; } to { right: 0; }
+}
+@-o-keyframes moveX {
+  from { left: 0; } to { right: 0; }
+}
+@keyframes moveX {
+  from { left: 0; } to { right: 0; }
+}
+@-webkit-keyframes moveY {
+  from { top: 0; } to { bottom: 0; }
+}
+@-moz-keyframes moveY {
+  from { top: 0; } to { bottom: 0; }
+}
+@-o-keyframes moveY {
+  from { top: 0; } to { bottom: 0; }
+}
+@keyframes moveY {
+  from { top: 0; } to { bottom: 0; }
+}*/
+
+
+ 
+</style>
+<script type="text/javascript">
+
+var audio = document.createElement("audio");
+audio.src = "alarm.m4a";
+audio.addEventListener('ended', function () {
+// Wait 1800000 milliseconds before next loop
+setTimeout(function () { audio.play(); }, 1800000);
+}, false);
+audio.play();
+
+var now = new Date();
+var hours = now.getHours();
+
+//Keep in code - Written by Computerhope.com
+//Place this script in your HTML heading section
+    </script>
+
+    <script>
+document.bgColor="#CC9900";
+
+//18-19 night
+if (hours > 17 && hours < 20){
+document.write ('<body style="background-color: #FF3333">');
+}
+//20-21 night
+else if (hours > 19 && hours < 22){
+document.write ('<body style="background-color: orangered">');
+}
+//22-4 night
+else if (hours > 21 || hours < 5){
+document.write ('<body style="background-color: #336600">');
+}
+//9-17 day
+else if (hours > 8 && hours < 18){
+document.write ('<body style="background-color: #CC66FF">');
+}
+//7-8 day
+else if (hours > 6 && hours < 9){
+document.write ('<body style="background-color: skyblue">');}
+//5-6 day
+else if (hours > 4 && hours < 7){
+document.write ('<body style="background-color: steelblue">');
+}
+else {
+document.write ('<body style="background-color: white">');
+}
+
+
+</script>
+
+
+    
+</head>
+
+<body>
+
+
+    <div class="box"><b></b></div>
+
+    
+<!-- <audio controls style="display:none">
+  <source src="alarm.m4a" >
+</audio>-->
+    
+ <iframe src="silence.mp3" allow="autoplay" id="audio"></iframe> 
+    
+        <audio id="player" autoplay controls><source src="alarm.mp3"></audio>
+    
+    
+</body>
+</html>
+
+
+

@@ -1,0 +1,71 @@
+<!-- 	https://editor.p5js.org/BarneyCodes/sketches/QAEms_Oh8
+ https://www.youtube.com/watch?v=olXv8GOfpNw
+ --> 
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watercolor Bruise Effect</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let particles = [];
+
+        function setup() {
+            createCanvas(windowWidth, windowHeight);
+            for (let i = 0; i < 300; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function draw() {
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].move();
+                particles[i].display();
+            }
+        }
+
+        class Particle {
+            constructor() {
+                this.x = random(width);
+                this.y = random(height);
+                this.diameter = random(5, 12);
+                this.xSpeed = random(-1, 1);
+                this.ySpeed = random(-1, 1);
+                this.alpha = random(100, 200);
+                this.color = [random(200, 255), random(100, 200), random(50, 150)];
+            }
+
+            move() {
+                this.x += this.xSpeed;
+                this.y += this.ySpeed;
+                if (this.x < 0 || this.x > width) {
+                    this.xSpeed *= -1;
+                }
+                if (this.y < 0 || this.y > height) {
+                    this.ySpeed *= -1;
+                }
+            }
+
+            display() {
+                noStroke();
+                fill(this.color[0], this.color[1], this.color[2], this.alpha);
+                ellipse(this.x, this.y, this.diameter, this.diameter);
+            }
+        }
+
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight);
+        }
+    </script>
+</body>
+</html>
