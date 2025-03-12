@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #0b1b54; /* Set background color as needed */
+      
+    }
+
+    .cloud {
+      position: absolute;
+      white-space: nowrap;
+      font-size: 30px;
+      font-family: "Arial Rounded MT Bold";
+      font-optical-sizing: auto;
+      color: lightyellow;
+      animation: moveCloud linear infinite;
+    }
+
+    @keyframes moveCloud {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(-100vw);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Repeat the phrase "i am walking in a cloud" five times -->
+  <div class="cloud">shark</div>
+  <div class="cloud">we were all swimming</div>
+  <div class="cloud">towards the shore</div>
+  <div class="cloud">no land in sight</div>
+  <div class="cloud">we were all swimming</div>
+  <div class="cloud">towards the shore</div>
+  <div class="cloud">we were all swimming</div>
+  <div class="cloud">towards the shore</div>
+  <div class="cloud">no land in sight</div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const clouds = document.querySelectorAll('.cloud');
+
+      clouds.forEach(cloud => {
+        const startHeight = Math.random() * window.innerHeight;
+        const startOffset = Math.random() * window.innerWidth; // Start within the viewport
+        const speed = Math.random() * (0.75 - 0.25) + 0.25; // Random speed between 0.25 and 0.75
+
+        cloud.style.top = `${startHeight}px`;
+        cloud.style.left = `${startOffset}px`;
+
+        function moveCloud() {
+          const currentLeft = parseFloat(getComputedStyle(cloud).left);
+          const newLeft = currentLeft + speed; // Change to addition to ensure leftward movement
+
+          cloud.style.left = `${newLeft}px`;
+
+          if (newLeft > window.innerWidth) {
+            cloud.style.left = `${-cloud.clientWidth}px`;
+            cloud.style.top = `${Math.random() * window.innerHeight}px`;
+          }
+
+          requestAnimationFrame(moveCloud);
+        }
+
+        moveCloud();
+      });
+    });
+  </script>
+</body>
+</html>

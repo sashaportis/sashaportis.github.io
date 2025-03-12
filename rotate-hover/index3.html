@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+    <style>
+
+  p {
+    display:block;
+  }  
+
+span {
+    font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+
+
+        /* Firefox */
+	-moz-transition: all .25s ease;
+	/* WebKit */
+	-webkit-transition: all .25s ease;
+	/* Opera */
+	-o-transition: all .25s ease;
+	/* Standard */
+	transition: all .25s ease;
+}
+
+span:hover {
+    -webkit-transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+
+   </style>
+    
+</head>
+  
+  <body>
+    <p>MAZIYAR PAHLEVAN</p>
+
+
+<p>hfdjhsjfdhsjfk</p>
+       
+
+<script>
+
+    $('p').html(function (i, html) {
+        var chars = $.trim(html).split("");
+        return '<span>' + chars.join('</span><span>') + '</span>';
+    });
+        </script>
+</body>
+</html>

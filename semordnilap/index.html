@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>semordnilap</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100vw;
+            /*font-family: sans-serif;*/
+            font-size: 50px;
+            filter: blur(.25px);
+        }
+
+        .typewriter-container {
+            text-align: center;
+            visibility: hidden;
+            display: block;
+            margin-bottom: 20px; /* Adjust as needed */
+        }
+
+        .typewriter-container span {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 45px;
+        }
+
+        .typewriter-text {
+            opacity: 0;
+            animation: typing 0s steps(10, end) forwards infinite; /* Set animation to repeat infinitely */
+        }
+
+        @keyframes typing {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="typewriter-container">
+        <span class="typewriter-text" style="animation-delay: 0.5s">S</span>
+        <span class="typewriter-text" style="animation-delay: 1s">T</span>
+        <span class="typewriter-text" style="animation-delay: 1.5s">R</span>
+        <span class="typewriter-text" style="animation-delay: 2s">E</span>
+        <span class="typewriter-text" style="animation-delay: 2.5s">S</span>
+        <span class="typewriter-text" style="animation-delay: 3s">S</span>
+        <span class="typewriter-text" style="animation-delay: 3.5s">E</span>
+        <span class="typewriter-text" style="animation-delay: 4s">D</span>
+    </div>
+
+    <div class="typewriter-container">
+        <span class="typewriter-text" style="animation-delay: 0.5s">D</span>
+        <span class="typewriter-text" style="animation-delay: 1s">E</span>
+        <span class="typewriter-text" style="animation-delay: 1.5s">S</span>
+        <span class="typewriter-text" style="animation-delay: 2s">S</span>
+        <span class="typewriter-text" style="animation-delay: 2.5s">E</span>
+        <span class="typewriter-text" style="animation-delay: 3s">R</span>
+        <span class="typewriter-text" style="animation-delay: 3.5s">T</span>
+        <span class="typewriter-text" style="animation-delay: 4s">S</span>
+    </div>
+
+    <script>
+        // Show the containers after a slight delay to make sure they're properly centered
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.typewriter-container').forEach(function(container) {
+                container.style.visibility = 'visible';
+            });
+        });
+    </script>
+
+    <script>
+        // Function to reload the page after 5 seconds
+        function autoRefresh() {
+            setTimeout(function() {
+                location.reload();
+            }, 5000); // 5000 milliseconds = 5 seconds
+        }
+
+
+function getRandomColor() {
+            return '#' + Math.floor(Math.random() * 16777215).toString(16);
+        }
+
+        // Function to apply random background color and font color
+        function applyRandomColors() {
+            var randomBackgroundColor = getRandomColor();
+            var randomFontColor = getRandomColor();
+
+            document.body.style.backgroundColor = randomBackgroundColor;
+            document.body.style.color = randomFontColor;
+        }
+
+
+        // Call the autoRefresh function when the page loads
+       window.onload = function() {
+    autoRefresh();
+    applyRandomColors();
+};
+    </script>
+
+
+</body>
+
+</html>
