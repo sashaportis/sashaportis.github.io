@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Click to Add Borders</title>
+<style>
+  * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body, html {
+    
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  body {
+    border: 30px solid black;
+  }
+
+ 
+  
+  .frame1 {
+    height: 100%;
+    width: 100%;
+  }
+  .frame2 {
+    height: 100%; 
+    width: 100%; 
+    border: 30px solid blue; 
+  }
+
+  .frame3 {
+    height: 100%; 
+    width: 100%; 
+    border: 30px solid orange; 
+  }
+
+  .frame4 {
+    height: 100%; 
+    width: 100%; 
+    border: 30px solid pink; 
+  }
+
+  .frame5 {
+    height: 100%; 
+    width: 100%; 
+    border: 30px solid limegreen; 
+  }
+</style>
+</head>
+<body>
+
+<div class="frame1" onclick="addContent(event)">
+  <div class="frame2">
+  	<div class="frame3">
+  		<div class="frame4">
+  			<div class="frame5">
+  			</div>
+  </div>
+  </div>
+  </div>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>

@@ -1,18 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<script src="../_scripts/jquery.js"></script>
+	<script src="scripts.js"></script>
+	<link rel="stylesheet" href="style.css">
+
+	<title>Site for Sore Eyes</title>
+    
+
+<!-- https://index.goods.no/materials/forest-wool
+ -->    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+  <script>
+            $(document).ready(function(){
+                $(".container").click(function(){
+                var r = Math.floor(Math.random() * 255);
+                var g = Math.floor(Math.random() * 255);
+                var b = Math.floor(Math.random() * 255);
+                 var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+                 $(this).css("background-color",color);
+                })
+                
+            });
+        </script>
 </head>
 <body>
 
-    <ol>
-      <li><a href="entries/entry1/final/index.html">Entry 1</a></li>
-      <li><a href="entries/entry2/final/index.html">Entry 2</a></li>
-      <li><a href="entries/entry3/final/index.html">Entry 3</a></li>
-      <li><a href="entries/generator/index.html">Generator</a></li>
-      <li>Entry 5</li>
-    </ol>
+
+<header>
+	<div class="title">A Site for Sore Eyes</div>
+	<div class="content">
+    A collection of web experiments by Sasha Portis from 2014 to now. 
+   </div>
+
+</header>
+
+<main>
+
+			<a href="alarm/index.html" target="blank" class="container">
+					<p>
+						<span>Interruption Alarm (a tool)</span> <!-- — A site in which a blue circle the size of a stress ball bounces around the screen like the DVD pause screen and a homemade audio recording of a woman's high pitched voice imitating an alarm clock sound goes off at an internval of your choice. -->
+          </p>
+      </a>
+			
+			<a href="swimming/index.html" target="blank" class="container dream">
+						<p><span>Dream #1</span></p>
+            </a>
+			
+			
+			<a href="corn/index.html" target="blank" class="container dream">
+				<p>
+					<span>Corny Website</span> <!-- — If corn on the cob were a website and you could eat it like Mickey Mouse and Donald Duck in "Mickey's Trailer." -->  
+				</p>
+      </a>
+			
+		<a href="jobs/index.html" target="blank" class="container dream">
+				<p><span>All the Jobs I've Ever Had<!-- All the Jobs I’ve Ever Had --></span> </p>
+    </a>
+			
+			
+		<a href="blankMagazine/index.html" target="blank" class="container dream">
+       <p><span><!-- A  -->Blank Magazine</span></p>
+    </a>
+		
+			
+			
+		<a href="last-supper/index.html" target="blank" class="container dream">
+				<p>The Last Supper Leftovers</p>
+    </a>
+
+    <a href="glass-half-full/index.html" target="blank" class="container dream">
+				<p><span>Glass Half Full</span> </p>
+    </a>
+
+    <a href="clock/index.html" target="blank" class="container dream">
+				<p><span>Negative Clock</span> </p>
+    </a>
+
+    <a href="semordnilap/index.html" target="blank" class="container dream">
+				<p><span><!-- A  -->Semordnilap</span> </p>
+    </a>
+
+    <a href="falling/index.html" target="blank" class="container dream">
+				<p><span>Dream #2</span> </p>
+    </a>
+
+    <a href="travel/index.html" target="blank" class="container dream">
+				<p><span>Travel<!-- Long Distance Travel --></span> </p>
+    </a>
+
+    <a href="storeFront/index.html" target="blank" class="container dream">
+				<p><span>A Storefront Scene</span> </p>
+    </a>
+
+    <a href="word_image/index.html" target="blank" class="container dream">
+				<p><span>Word & Image</span> </p>
+    </a>
+
+    <a href="abel/index.html" target="blank" class="container dream">
+				<p><span>The Sound of a Text</span> </p>
+    </a>
+
+    <a href="goldfish/index.html" target="blank" class="container dream">
+				<p><span>Dream #3</span> </p>
+    </a>
+
+    <a href="alarm/index.html" target="blank" class="container dream">
+				<p><span>?</span> </p>
+    </a>
+    
+
+</main>
+
+
+<script>
+  $('.title').click(function(){
+    $(this).parents('header').find('.content').slideToggle();
+});
+
+  </script>
 </body>
 </html>

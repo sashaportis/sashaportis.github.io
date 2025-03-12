@@ -1,0 +1,135 @@
+
+
+
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;CHARSET=iso-8859-1">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<title>Forward</title>
+
+<style>
+body, html {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+select:focus {outline:0;}
+
+select {
+
+    border-style: none;
+    position: fixed;
+    border-color: transparent;
+    background: white;
+    right: 20px;
+    top: 20px;
+    width: 300px;
+    padding: 0 15px;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    line-height: 1;
+    border: 0;
+    border-radius: 100px;
+    height: 60px;
+    background: url(https://cdn.onlinewebfonts.com/svg/img_354921.png) no-repeat right whitesmoke;
+    background-size: 20px;
+    -webkit-appearance: none;
+    background-position-x: 255px;
+}
+
+
+img {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 100;
+}
+
+iframe {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    width: 100%;
+    height: 100vh;
+    z-index: -1000;
+}
+
+#intro {
+    /*background: #03fc62;*/
+    background: whitesmoke;
+    width: 30%;
+    height: auto;
+    position: fixed;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%);
+    padding: 30px;
+    font-size: 2em;
+    text-align: center;
+    font-family: sans-serif;
+    /*border-radius: 20px;*/
+    opacity: .8;
+}
+
+</style>
+<script>
+var minNumber = 0;
+var maxNumber = 3;
+
+function randomNumberFromRange(min,max)
+{
+    return  Math.floor(Math.random()*(max-min+1)+min);
+
+   
+}
+
+
+$("#s2")[0].selectedIndex = randomNumberFromRange(minNumber, maxNumber);
+</script>
+
+</head>
+
+<body>
+
+<!-- <div id="intro">Welcome to Central Park. Before entering, please choose your vehicle.</div>
+ --><img id="imageToSwap" class="profile" src="blank.png">
+
+<select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);"  id="s2">
+    <option value="blank.png" selected>Vehicles</option>
+    <option value="ball.png">Ball</option>
+    <option value="car.png">Car</option>
+    <option value="cart.png">Cart</option>
+    <option value="cloud.png">Cloud</option>
+    <option value="cookie.png">Cookie</option>
+    <option value="curtains.png">Stage</option>
+    <option value="dog.png">Dog</option>
+    <option value="fence.png">Fence</option>
+	<option value="horse.png">Horse</option>
+    <option value="night_goggles.png">Night Goggles</option>
+    <option value="phone.png">Phone</option>
+    <option value="pointer.png">Pointer</option>
+    <option value="pumpkin.png">Pumpkin</option>
+    <option value="rain.png">Glass Box</option>
+    <option value="rose_glasses.png">Rose Glasses</option>
+    <option value="shrub.png">Shrubs</option>
+    <option value="stop.png">Stop Sign</option>
+
+</select>
+
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!4v1679670634940!6m8!1m7!1sUkY6dWmzRIw-Yy9sXlVjcQ!2m2!1d40.76808578354555!2d-73.98083733626574!3f96.14483446512783!4f0.281950634074434!5f0.7820865974627469" frameborder="0" style="border:0" allowfullscreen></iframe>
+  
+</body>
+
+</html>

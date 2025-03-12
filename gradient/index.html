@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gradient Accordion</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+font-family: "Cutive Mono", monospace;
+  font-weight: 500;
+  font-size: 28px;
+/*   background: rgb(60,85,182);
+background: linear-gradient(0deg, rgba(60,85,182,1) 16%, rgba(189,105,183,1) 32%, rgba(44,44,39,1) 44%, rgba(195,50,34,1) 72%, rgba(107,133,224,1) 82%, rgba(253,187,45,1) 100%);
+    background-size: cover;*/
+  }
+
+
+.content {
+    padding: 20px;
+    display: none;
+   padding: 0 100px 40px 100px;
+   
+
+    /*border-bottom: 1px solid black;*/
+}
+    
+.title {
+   /* border-bottom: 1px solid black;*/
+    padding: 10px 20px 40px 10px;
+    
+    cursor: pointer;
+    text-align: center;
+     
+}
+
+.week {
+  padding: 0px 0 60px 0;
+}
+
+.week:first-child 
+{
+    background-color: red;
+        box-shadow: 0 0 40px 40px red;
+}
+
+.week:nth-child(2)  {
+    background-color: blue;
+        box-shadow: 0 0 40px 40px blue;
+}
+
+.week:nth-child(3)  {
+    background-color: beige;
+        box-shadow: 0 0 40px 40px beige;
+}
+
+.week:nth-child(4)  {
+    background-color: rebeccapurple;
+        box-shadow: 0 0 40px 40px rebeccapurple;
+}
+
+.week:nth-child(5)  {
+    background-color: sandybrown;
+        box-shadow: 0 0 40px 40px sandybrown;
+}
+
+.week:nth-child(6)  {
+    background-color: limegreen;
+        box-shadow: 0 0 40px 40px limegreen;
+}
+
+.week:nth-child(7)  {
+    background-color: slategray;
+        box-shadow: 0 0 40px 40px slategray;
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<div class="week">
+    <div class="title">now you can see me</div>
+    <div class="content">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam leo nec dui laoreet iaculis. Nunc congue cursus ultrices. Quisque at arcu nec nibh fringilla malesuada. Donec rutrum accumsan porta. Quisque pellentesque pulvinar elit ac interdum. Sed tristique mauris quis enim cursus, quis ornare augue lobortis. Sed volutpat quis arcu sit amet euismod. Sed a enim porta, tempus odio eget, consectetur tortor.
+    </div>
+</div>
+
+<div class="week">
+    <div class="title">now you can see me</div>
+    <div class="content">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam leo nec dui laoreet iaculis. Nunc congue cursus ultrices. Quisque at arcu nec nibh fringilla malesuada. Donec rutrum accumsan porta. Quisque pellentesque pulvinar elit ac interdum. Sed tristique mauris quis enim cursus, quis ornare augue lobortis. Sed volutpat quis arcu sit amet euismod. Sed a enim porta, tempus odio eget, consectetur tortor.
+    </div>
+</div>
+
+<div class="week">
+    <div class="title">now you can see me</div>
+    <div class="content">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam leo nec dui laoreet iaculis. Nunc congue cursus ultrices. Quisque at arcu nec nibh fringilla malesuada. Donec rutrum accumsan porta. Quisque pellentesque pulvinar elit ac interdum. Sed tristique mauris quis enim cursus, quis ornare augue lobortis. Sed volutpat quis arcu sit amet euismod. Sed a enim porta, tempus odio eget, consectetur tortor.
+    </div>
+</div>
+
+<div class="week">
+    <div class="title">now you can see me</div>
+    <div class="content">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam leo nec dui laoreet iaculis. Nunc congue cursus ultrices. Quisque at arcu nec nibh fringilla malesuada. Donec rutrum accumsan porta. Quisque pellentesque pulvinar elit ac interdum. Sed tristique mauris quis enim cursus, quis ornare augue lobortis. Sed volutpat quis arcu sit amet euismod. Sed a enim porta, tempus odio eget, consectetur tortor.
+    </div>
+</div>
+
+<div class="week">
+    <div class="title">now you can see me</div>
+    <div class="content">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam leo nec dui laoreet iaculis. Nunc congue cursus ultrices. Quisque at arcu nec nibh fringilla malesuada. Donec rutrum accumsan porta. Quisque pellentesque pulvinar elit ac interdum. Sed tristique mauris quis enim cursus, quis ornare augue lobortis. Sed volutpat quis arcu sit amet euismod. Sed a enim porta, tempus odio eget, consectetur tortor.
+    </div>
+</div>
+
+<div class="week">
+    <div class="title">now you can see me</div>
+    <div class="content">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam leo nec dui laoreet iaculis. Nunc congue cursus ultrices. Quisque at arcu nec nibh fringilla malesuada. Donec rutrum accumsan porta. Quisque pellentesque pulvinar elit ac interdum. Sed tristique mauris quis enim cursus, quis ornare augue lobortis. Sed volutpat quis arcu sit amet euismod. Sed a enim porta, tempus odio eget, consectetur tortor.
+    </div>
+</div>
+
+<div class="week">
+    <div class="title">now you can see me</div>
+    <div class="content">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam leo nec dui laoreet iaculis. Nunc congue cursus ultrices. Quisque at arcu nec nibh fringilla malesuada. Donec rutrum accumsan porta. Quisque pellentesque pulvinar elit ac interdum. Sed tristique mauris quis enim cursus, quis ornare augue lobortis. Sed volutpat quis arcu sit amet euismod. Sed a enim porta, tempus odio eget, consectetur tortor.
+    </div>
+</div>
+
+<script>
+  $('.title').click(function(){
+    $(this).parents('.week').find('.content').slideToggle();
+});
+
+  </script>
+
+</body>
+</html>
