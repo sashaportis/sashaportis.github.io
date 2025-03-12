@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+
+  <meta charset="UTF-8">
+  <title>Very Indiana Jones</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+<style>
+
+    * {
+               box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+        
+       
+           }
+
+
+ html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  
+}
+
+
+
+body{
+ 
+    overflow-y: none;
+    text-align: center;
+   padding: 0;
+   background: rgb(0,0,0);
+
+    letter-spacing: .5px;
+     font-family: "Rubik", sans-serif;
+      font-weight: 700;
+margin: 120vh 0 80vh 0;
+   background: #121111;
+}
+
+
+    .rotate {
+        color: white;
+        text-align: center;
+        width: 500px;
+        position: relative;
+        margin-top: 100vh;
+    }
+        
+        .push {
+            margin-left: 40%;
+        }
+
+        .menu-home {
+            position: absolute;
+            left: 50%;
+           
+            transform: translateX(-50%);
+        }
+
+
+
+
+
+
+p {
+    text-align: center;
+    margin-bottom: 70px;
+     transform-origin: center;
+    font-size: 70px;
+    font-weight: 500;
+     -webkit-text-stroke: 6px black;
+    color: black;
+    letter-spacing: 1;
+    text-transform: uppercase;
+text-shadow: 0 0 20px black, 0 0 30px black, 0 0 40px black, 0 0 50px gray, 0 0 60px gray, 0 0 70px gray, 0 0 80px lightyellow;
+}
+
+
+
+p.space {
+    margin-bottom: 400px;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 400px) {
+
+
+    
+    
+}
+
+
+</style>
+    </head>
+<body>
+
+
+
+<div class="menu-home">
+    <div class="rotate">
+        <p>Jones.</p>
+    </div>
+    <div class="rotate">
+        <p>Indianda</p>
+    </div>
+    <div class="rotate">
+        <p>Very</p>
+    </div>
+
+
+    <div class="rotate">
+        <p class="push">boulders.</p>
+    </div>
+    <div class="rotate">
+        <p class="push">falling</p>
+    </div>
+    <div class="rotate">
+        <p class="push">with</p>
+    </div>
+    <div class="rotate">
+        <p class="push">a crevice</p>
+    </div>
+
+    <div class="rotate">
+        <p class="push">before</p>
+    </div>
+    <div class="rotate">
+        <p class="push">just</p>
+    </div>
+
+
+    <div class="rotate">
+        <p class="push">the way</p>
+    </div>
+    <div class="rotate">
+        <p class="push">out of</p>
+    </div>
+
+
+    <div class="rotate">
+        <p class="push">turned</p>
+    </div>
+    <div class="rotate">
+        <p class="push">and</p>
+    </div>
+
+    <div class="rotate">
+        <p>ground</p>
+    </div>
+    <div class="rotate">
+        <p>the</p>
+    </div>
+    <div class="rotate">
+        <p>into</p>
+    </div>
+
+    <div class="rotate">
+        <p>deeper</p>
+    </div>
+    <div class="rotate">
+        <p>and</p>
+    </div>
+    <div class="rotate">
+        <p>deeper</p>
+    </div>
+    <div class="rotate">
+        <p>and</p>
+    </div>
+    <div class="rotate">
+        <p>deeper</p>
+    </div>
+    <div class="rotate">
+        <p>and</p>
+    </div>
+    <div class="rotate">
+        <p>deeper</p>
+    </div>
+
+    <div class="rotate">
+        <p>abyss</p>
+    </div>
+    <div class="rotate">
+        <p></p>
+    </div>
+    <div class="rotate">
+        <p>into an</p>
+    </div>
+    <div class="rotate">
+        <p>downwards</p>
+    </div>
+    <div class="rotate">
+        <p>dove</p>
+    </div>
+    <div class="rotate">
+        <p>We</p>
+    </div>
+</div>
+
+   </div>
+
+    <script>
+    var rotation = 0;
+
+jQuery.fn.rotate = function(degrees) {
+    $(this).css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
+                 '-moz-transform' : 'rotate('+ degrees +'deg)',
+                 '-ms-transform' : 'rotate('+ degrees +'deg)',
+                 'transform' : 'rotate('+ degrees +'deg)'});
+};
+
+$('.rotate').each(function() {
+    rotation += 15;
+    $(this).rotate(rotation);
+});
+
+
+    </script>
+
+ <script>
+$(function() {
+$(document).scrollTop($(document).height()); 
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+    
+
+
+
+
+

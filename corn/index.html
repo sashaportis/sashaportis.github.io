@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: grid;
+      grid-template-columns: repeat(90, 1fr);
+      grid-auto-rows: -10px;
+      grid-gap: -15px;
+      margin: -10px;
+      padding: 0;
+      overflow: hidden;
+      background: lightyellow;
+      cursor: pointer;
+    }
+
+    div {
+      background: #fce303;
+      /*border: 1px solid black;*/
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 1); /* Adjust the shadow values as needed */
+
+      width: 1.5vw;
+      height: 40px;
+      border-radius: 30px/* 30px 10px 10px*/;
+
+      margin-right: -5px; /* Adjust the overlap value */
+      margin-bottom: -20px;
+
+     opacity: 1; /* Set initial opacity to 1 */
+    }
+
+    .hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*
+div:nth-child(odd) {
+      transform: translateY(-10px);
+    }*/
+
+video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1000;
+      position: absolute;
+    }
+
+  </style>
+</head>
+<body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const numDivs = 3600; // Adjust the number of divs as needed
+
+      for (let i = 0; i < numDivs; i++) {
+        const div = document.createElement('div');
+        document.body.appendChild(div);
+      }
+    });
+  </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const corns = document.querySelectorAll('div');
+
+  corns.forEach(corn => {
+    corn.addEventListener('mouseover', function () {
+      corn.classList.add('hidden');
+    });
+  });
+});
+
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const corns = document.querySelectorAll('div');
+
+  corns.forEach(corn => {
+    corn.addEventListener('mouseover', function () {
+      corn.classList.add('hidden');
+    });
+  });
+});
+
+</script>
+ <!--  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+  const corns = document.querySelectorAll('div');
+
+  corns.forEach((corn, index) => {
+    corn.addEventListener('hover', () => {
+      // Set opacity to 0 on click
+      corn.style.opacity = '0';
+
+      // Alternatively, you can remove the element from the DOM
+      // corn.remove();
+    });
+
+    // Set initial positions
+    const initialX = Math.random() * window.innerWidth;
+    const initialY = Math.random() * window.innerHeight;
+    corn.style.left = `${initialX}px`;
+    corn.style.top = `${initialY}px`;
+  });
+});
+</script> -->
+
+
+<video autoplay muted loop>
+    <source src="corn4.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</body>
+</html>
+

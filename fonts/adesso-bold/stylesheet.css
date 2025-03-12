@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Adesso';
+    src: url('Adesso-Bold.eot');
+    src: url('Adesso-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Adesso-Bold.woff2') format('woff2'),
+        url('Adesso-Bold.woff') format('woff'),
+        url('Adesso-Bold.ttf') format('truetype'),
+        url('Adesso-Bold.svg#Adesso-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
